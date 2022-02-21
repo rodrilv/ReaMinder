@@ -1,0 +1,23 @@
+{
+    "signin": "Inicia sesión con un enlace mágico",
+    "sendMagic": "Enviar enlace mágico",
+    "email": "Correo",
+    "name": "Nombre",
+    "website": "Sitio Web",
+    "upload": "Cargar Foto",
+    "config" : "Ajustes de la Cuenta",
+    "settings": "Configuración",
+    "logout": "Salir",
+    "title": "Título",
+    "content": "Qué quieres recordar?",
+    "due": "Vence: ",
+    "created" : "Creada: ",
+    "add": "Agregar un ReaMinder",
+    "loading": "Guardando...",
+    "save": "Guardar",
+    "update": "Actualizar",
+    "refresh": "You changed to English, refresh to complete.",
+    "magic": "Tu link mágico ha sido enviado a tu correo!",
+    "a-success": "Se ha eliminado correctamente",
+    "a-fail": "Hubo un error al eliminar el ReaMinder, intenta nuevamente!"
+}

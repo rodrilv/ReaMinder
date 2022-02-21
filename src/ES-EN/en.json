@@ -1,0 +1,23 @@
+{
+    "signin": "Sign in via magic link with your email below",
+    "sendMagic": "Send Magic Link",
+    "email": "Your email",
+    "name": "Name",
+    "website": "Website",
+    "upload": "Upload",
+    "config":"Account settings",
+    "settings" : "Settings",
+    "logout": "Logout",
+    "title": "Title",
+    "content": "What do you want to ReaMind?",
+    "due": "Due: ",
+    "created" : "Created: ",
+    "add": "Add a ReaMinder",
+    "loading": "Loading...",
+    "save": "Save",
+    "update" : "Update",
+    "refresh": "Cambiaste a Español, refresca la página para continuar.",
+    "magic": "Check your email for the login link!",
+    "a-success": "Deleted Successfully",
+    "a-fail": "An error ocurred while deleting, try again...!"
+}
