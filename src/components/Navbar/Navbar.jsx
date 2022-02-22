@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
@@ -38,12 +38,7 @@ export default function AccountMenu({ session }) {
   const handleOpenModalAdd = () => setOpenAdd(true);
   const handleCloseModalAdd = () => setOpenAdd(false);
 
-  useEffect(() => {
-    ObtainUsername();
-    ObtainImage();
-  }, [ImageUrl]);
-
-  const ObtainUsername = async () => {
+  const ObtainUsername = useCallback( async () =>{
     const user = supabase.auth.user();
     const { data, error } = await supabase
       .from("profiles")
@@ -57,9 +52,9 @@ export default function AccountMenu({ session }) {
     } else if (!error) {
       throw error;
     }
-  };
+  }, []);
 
-  const ObtainImage = async () => {
+  const ObtainImage = useCallback (async () =>{
     const { data, error } = await supabase.storage
       .from("avatars")
       .download(ImageUrl);
@@ -71,8 +66,8 @@ export default function AccountMenu({ session }) {
       console.log("Hubo un error durante la descarga");
       throw error;
     }
-  };
-
+  }, [ImageUrl]);
+  
   const changeLanguage = () => {
     if (window.localStorage.getItem("i18nextLng") === "es-ES") {
       window.localStorage.setItem("i18nextLng", "en-EN");
@@ -82,6 +77,13 @@ export default function AccountMenu({ session }) {
       Swal.fire(i18n.t("refresh"));
     }
   }
+
+  useEffect(() => {
+    ObtainUsername();
+    ObtainImage();
+  }, [ImageUrl, ObtainImage, ObtainUsername]);
+
+
 
     return (
       <React.Fragment>
