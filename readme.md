@@ -1,6 +1,17 @@
-create your supabase project and add your credentials in a .env file
+# ReaMinder App.
 
-npm install
-npm start
+## An Application for reminders and recordatories in order to remember things.
 
-it is also a pwa, you can run npm run build and then serve -s build to install it in a device
+This App is a PWA made with:
+- React
+- Supabase as "Back-End as a Service"
+- i18next for Automatic Translations and Optional Translation inside APP.
+
+You need to install these dependecies in order to put this to work:
+`supabase`
+`i18next-react`
+> You will need your own supabase keys for this project!
+__You can visit a demo by clickin' this link! (Thanks to Netlify)__
+
+[ReaMinder DEMO](https://peaceful-colden-fe1580.netlify.app)
+
