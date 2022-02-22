@@ -71,6 +71,7 @@ export default function Auth() {
           >
             {loading ? <span>{i18n.t("loading")}</span> : <span>{i18n.t("sendMagic")}</span>}
           </button>
+          <a href='https://github.com/rodrilv/ReaMinder'>Github</a>
         </div>
       </div>
     </div>
